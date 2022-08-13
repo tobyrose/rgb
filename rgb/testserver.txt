@@ -1,0 +1,22 @@
+cd ~/flaschen-taschen/server
+sudo ./ft-server --led-cols=64 --led-rows=64 --led-slowdown-gpio=2 --led-gpio-mapping=adafruit-hat-pwm
+
+https://itsfoss.com/vlc-is-unable-to-open-the-mrl/
+
+https://raw.githubusercontent.com/videolan/vlc/master/share/lua/playlist/youtube.lua
+
+locate youtube.lua
+/usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.luac
+
+sudo cp ~/Downloads/youtube.lua /usr/lib/x86_64-linux-gnu/vlc/lua/playlist/youtube.luac
+
+
+cvlc --play-and-exit --vout flaschen --flaschen-display=192.168.90.196 --flaschen-width=64 --flaschen-height=64 --no-audio https://www.youtube.com/watch?v=0j74jcxSunY
+
+
+./send-text -h 192.168.90.196 -g64x64 "♥Flaschen" -f fonts/5x5.bdf -s 60 -g 45x35+0+15+3 & ./send-text -h 192.168.90.196 -g64x6 "Taschen " -f fonts/5x5.bdf  -v  -s 60 -g 45x35+20+0+2 && fg
+
+
+
+to start video fro. pi
+cvlc --play-and-exit --vout flaschen --flaschen-display=192.168.90.196 --flaschen-width=64 --flaschen-height=64 --no-audio --codec avcodec,none  https://www.youtube.com/watch?v=0j74jcxSunY
