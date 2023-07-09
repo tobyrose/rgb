@@ -66,7 +66,7 @@ def gotimg():
                 exitc = 0
             else:
                 # Get the shell to do it, it's way better than python
-                exitc = os.system('wget -O '+imgpath+'newimg ' +currenturl)
+                exitc = os.system('wget --no-check-certificate -O '+imgpath+'newimg ' +currenturl)
 
                 """
                 imgdata = requests.get(currenturl)
